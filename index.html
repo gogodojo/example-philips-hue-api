@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- disable brower caching -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- add Jasmine -->
+        <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.1.0/jasmine_favicon.png">
+        <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.1.0/jasmine.css">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class='main-div'>
+          <h3>josh.ai Code Challenge Web App</h3>
+          <p>Getting Started:</p>
+          <ol>
+            <li>Open your browser's Dev Tools to observe the JS runtime console for this app</li>
+            <li>In a terminal, start the Hue Bridge Simulator serving to <strong>localhost:80</strong></li>
+            <li>In separate browser window/tab, browse to Hue Bridge Simulator at <a href="http://localhost:80">http://localhost:80</a></li>
+            <li>Click the [Link-Button] button (to put the bridge into "link" mode)</li>
+            <li>Within 30 seconds, refresh the josh.ai app window/tab to connect it to the bridge in privileged mode</li>
+            <li>Monitor browser Dev Tools console for messages</li>
+            <li>Expect: initial light status reported
+            <li>Expect: light status changes to be reported after setting (changing) state of light in bridge simulator manually.
+            <li>Note: Application continuously polls bridge every 2 seconds for changes, and will stop polling after 60 continuous seconds without any detected light changes.
+          </ol>
+          <p>
+            * If you see "link button not pressed" error message, try clicking [Link-Button] again in bridge simulator window/tab and reloading the app page.
+          </p>
+          <p>
+            The Jasmine unit test suite (below) will automatically run on page load.
+          </p>
+        </div>
+        <br>
+        <br>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+
+        <!-- add Jasmine -->
+        <script type="text/javascript" src="jasmine/lib/jasmine-3.1.0/jasmine.js"></script>
+        <script type="text/javascript" src="jasmine/lib/jasmine-3.1.0/jasmine-html.js"></script>
+        <script type="text/javascript" src="jasmine/lib/jasmine-3.1.0/boot.js"></script>
+
+
+        <!-- application source scripts -->
+        <script src="js/config.js"></script>
+        <script src="js/HueBridgeService.js"></script>
+        <script src="js/LightsController.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- include spec files here... -->
+        <script src="spec/Jasmine.js"></script>
+        <script src="spec/LightsController.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

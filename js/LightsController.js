@@ -45,8 +45,8 @@ class LightsController {
 
     // reduce differences in key:values to array of individual deltas
     // NOTE: assuming same keys are present in both light objects
-    const {id: id, ...rest} = prevState;
-    const props = Object.keys(rest);
+    const id = prevState.id;
+    const props = Object.keys(prevState);
 
     const deltas = props.reduce((deltas, prop, index, array) => {
       if (prevState[prop] !== newState[prop]) {

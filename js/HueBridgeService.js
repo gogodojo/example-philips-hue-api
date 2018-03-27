@@ -74,7 +74,7 @@ class HueBridgeService {
       "Content-Type": "application/json"
     });
     const data = {
-      devicetype: 'josh.ai.app',
+      devicetype: 'code.challenge.app',
       username: ''
     };
     const config = {

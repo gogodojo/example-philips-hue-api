@@ -30,25 +30,33 @@
 
         <!-- Add your site or application content here -->
         <div class='main-div'>
-          <h3>josh.ai Code Challenge Web App</h3>
-          <p>Getting Started:</p>
+          <h2>Philips Hue Code Challenge Web App</h2>
+
+          <h3>Instructions</h3>
           <ol>
-            <li>Open your browser's Dev Tools to observe the JS runtime console for this app</li>
-            <li>In a terminal, start the Hue Bridge Simulator serving to <strong>localhost:80</strong></li>
-            <li>In separate browser window/tab, browse to Hue Bridge Simulator at <a href="http://localhost:80">http://localhost:80</a></li>
-            <li>Click the [Link-Button] button (to put the bridge into "link" mode)</li>
-            <li>Within 30 seconds, refresh the josh.ai app window/tab to connect it to the bridge in privileged mode</li>
-            <li>Monitor browser Dev Tools console for messages</li>
-            <li>Expect: initial light status reported
-            <li>Expect: light status changes to be reported after setting (changing) state of light in bridge simulator manually.
+            <li>Install and run a Hue Bridge Simulator:
+              <ol>
+                <li>Install a <a href="https://www.npmjs.com/package/hue-simulator">Hue Bridge Simulator</a> (eg. "sudo npm install -g hue-simulator").</li>
+                <li>In a terminal, start the Hue Bridge Simulator serving to <strong>localhost:80</strong> (eg. "sudo hue-simulator").</li>
+                <li>Browse to Hue Bridge Simulator at <a href="http://localhost:80">http://localhost:80</a>.</li>
+              </ol>
+            </li>
+            <li>In a new browser tab/window, browse to this app's <strong>index.html</strong> file (or serve it at a known address).</li>
+            <li>Open your browser's Dev Tools to observe the JS runtime console for this app.</li>
+            <li>Back in the bridge simulator tab/window, click the <strong>[Link-Button]</strong> button (to put the bridge into "link" mode).</li>
+            <li>Quickly (within 30 seconds) return to and <strong>refresh</strong> the code-challenge app window/tab to connect it to the bridge in privileged mode.</li>
+            <li>Monitor browser Dev Tools console for messages.</li>
+            <li>Expect: initial light status reported.
+            <li>Expect: light status changes to be reported within 2 seconds after manually setting/modifying the state of light in the bridge simulator window.
             <li>Note: Application continuously polls bridge every 2 seconds for changes, and will stop polling after 60 continuous seconds without any detected light changes.
           </ol>
-          <p>
-            * If you see "link button not pressed" error message, try clicking [Link-Button] again in bridge simulator window/tab and reloading the app page.
-          </p>
-          <p>
-            The Jasmine unit test suite (below) will automatically run on page load.
-          </p>
+
+          <h3>Notes</h3>
+          <ul>
+            <li>Should work on evergreen browsers that support native ES6 (Chrome, Safari, Edge).</li>
+            <li>If you see "link button not pressed" error message, try clicking [Link-Button] again in bridge simulator window/tab and reloading the app page.</li>
+            <li>The Jasmine unit test suite (below) will automatically run on page load.</li>
+          </ul>
         </div>
         <br>
         <br>

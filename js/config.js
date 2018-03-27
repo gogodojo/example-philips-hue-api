@@ -14,6 +14,6 @@ HueApp.appConfig = {
 
 HueApp.bridgeConfig = {
   host: 'localhost:80',     // should be provided by service discovery (UPnP, eg.)
-  appName: 'josh.ai.app',
+  appName: 'code-challenge.app',
   username: ''              // will be provided by bridge during user creation
 }
